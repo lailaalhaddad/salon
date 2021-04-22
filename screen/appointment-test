@@ -1,0 +1,129 @@
+import React, { useState } from "react";
+import { Text, View, TextInput } from "react-native";
+import { TableContent, CustomTable } from "../styles";
+
+const Appointments = () => {
+  const [data, setData] = useState({
+    specialist: "",
+    category: "",
+    service: "",
+    timeslot: "",
+  });
+  const handleChange = (event) => {
+    setData((prevState) => ({
+      ...prevState,
+      [event.target.name]:
+        event.target.name === "timeslot"
+          ? +event.target.value
+          : event.target.value,
+    }));
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // gymStore.addClient(data);
+    console.log(data);
+  };
+  return (
+    <View>
+      <CustomTable>
+        <form onSubmit={handleSubmit}>
+          <TableContent>
+            <Text>specialist: </Text>
+            <Text>specialist name:</Text>
+            <TextInput onChange={handleChange} type="text" name="specialist" />
+          </TableContent>
+
+          <TableContent>
+            <Text>category:</Text>
+            <TextInput onChange={handleChange} type="text" name="category" />
+          </TableContent>
+
+          <TableContent>
+            <Text>service:</Text>
+            <TextInput onChange={handleChange} type="text" name="service" />
+          </TableContent>
+
+          <TableContent>
+            <Text>timeslot:</Text>
+            <TextInput onChange={handleChange} type="number" name="timeslot" />
+          </TableContent>
+        </form>
+      </CustomTable>
+    </View>
+  );
+};
+
+export default Appointments;
+
+
+
+import React from "react";
+import { Text, View } from "react-native";
+import { TableContent, CustomTable } from "../styles";
+
+const Appointments = () => {
+  return (
+    <View>
+      <CustomTable>
+        <TableContent>
+          <Text>Date: </Text>
+        </TableContent>
+
+        <TableContent>
+          <Text>Time:</Text>
+        </TableContent>
+
+        <TableContent>
+          <Text>service:</Text>
+        </TableContent>
+
+        <TableContent>
+          <Text>Price:</Text>
+        </TableContent>
+      </CustomTable>
+    </View>
+  );
+};
+
+export default Appointments;
+
+
+import React from "react";
+import { Text, View } from "react-native";
+import { CustomTable } from "../styles";
+import { TableView } from "react-native-tableview";
+const Appointments = () => {
+  return (
+    <View>
+      <CustomTable>
+        <TableView>
+          <Text>Date: </Text>
+        </TableView>
+
+        <TableView>
+          <Text>Time:</Text>
+        </TableView>
+
+        <TableView>
+          <Text>service:</Text>
+        </TableView>
+
+        <TableView>
+          <Text>Price:</Text>
+        </TableView>
+      </CustomTable>
+    </View>
+  );
+};
+
+export default Appointments;
+
+ <View>
+      <Text>Date: </Text>
+
+      <Text>Time:</Text>
+
+      <Text>service:</Text>
+
+      <Text>Price:</Text>
+    </View>
