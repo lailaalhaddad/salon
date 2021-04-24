@@ -1,19 +1,17 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import AppointmentList from "../components/Appointments/AppointmentList";
+import CreateAppointment from "../components/Appointments/CreateAppointment";
+import { Box, InnBox } from "../styles";
+// import { TableContent, CustomTable } from "../styles";
 
-import { Table, Row, Rows } from "react-native-table-component";
 const Appointments = () => {
-  const table = [
-    { headTable: ["Date", "Time", "Service", "Price"] },
-    { dataTable: [] },
-  ];
   return (
-    <View>
-      <Table>
-        <Row data={table.headTable} />
-        <Rows data={table.dataTable} />
-      </Table>
-    </View>
+    <Box>
+      <InnBox>
+        <AppointmentList />
+      </InnBox>
+    </Box>
   );
 };
 

@@ -5,22 +5,22 @@ import { Box, InnBox, ButtonContainer, Title } from "../styles";
 const HomePage = ({ navigation }) => {
   return (
     <View>
-      <Box>
-        <InnBox>
+      <View>
+        <View>
           <Title>Appointments</Title>
           <ButtonContainer
             onPress={() => navigation.navigate("Appointments")}
           ></ButtonContainer>
-        </InnBox>
-      </Box>
-      <Box>
-        <InnBox>
+        </View>
+      </View>
+      <View>
+        <View>
           <Title>Schedule</Title>
           <ButtonContainer
             onPress={() => navigation.navigate("Schedule")}
           ></ButtonContainer>
-        </InnBox>
-      </Box>
+        </View>
+      </View>
     </View>
   );
 };
