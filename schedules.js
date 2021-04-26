@@ -1,10 +1,12 @@
 import React from "react";
+import DatePicker from "react-native-datepicker";
+import { TimePicker } from "react-native-simple-time-picker";
 const schedules = [
   {
     id: 0,
-    date: "22March2021",
-    startTime: "11:00",
-    endTime: "12:00",
+    date: "12-03-2021",
+    startTime: 1100,
+    endTime: 1200,
   },
 ];
 
