@@ -28,7 +28,7 @@ export const ButtonContainer = styled.TouchableOpacity`
 `;
 export const Box = styled.View`
   width: 80%;
-  height: 30%;
+  height: 50%;
   padding: 2px;
 `;
 export const InnBox = styled.View`
