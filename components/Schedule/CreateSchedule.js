@@ -1,3 +1,4 @@
+import DateTimePicker from "@react-native-community/datetimepicker";
 // import React in our code
 import React, { useState } from "react";
 
@@ -6,25 +7,26 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 //import DatePicker from the package we installed
 import DatePicker from "react-native-datepicker";
-//@react-native-community/datetimepicker
+//import TimePicker from the package we installed
+import TimePicker from "react-native-simple-time-picker";
 
-const CreateDate = () => {
-  const [date, setDate] = useState("02-05-2021");
+const CreateSchedule = () => {
+  const [date, setDate] = useState("09-10-2020");
+  // const [selectedHours, setSelectedHours] = useState(0);
+  // const [selectedMinutes, setSelectedMinutes] = useState(0);
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <Text style={styles.title}>
-          React Native Date Picker – To Pick the Date using Native Calendar
-        </Text>
+        <Text style={styles.title}>Date</Text>
         <DatePicker
           style={styles.datePickerStyle}
-          date={date} // Initial date from state
-          mode="date" // The enum of date, datetime and time
+          date={date} //initial date from state
+          mode="date" //The enum of date, datetime and time
           placeholder="select date"
           format="DD-MM-YYYY"
-          minDate="02-05-2021"
-          maxDate="02-05-2022"
+          minDate="01-01-2016"
+          maxDate="01-01-2019"
           confirmBtnText="Confirm"
           cancelBtnText="Cancel"
           customStyles={{
@@ -44,11 +46,27 @@ const CreateDate = () => {
           }}
         />
       </View>
+      <View>
+        {/* <Text style={styles.title}>
+          React Native Time Picker – To Pick the Time using Native Time Picker
+        </Text>
+        <Text>
+          Selected Time: {selectedHours}:{selectedMinutes}
+        </Text>
+        <TimePicker
+          selectedHours={selectedHours}
+          //initial Hourse value
+          selectedMinutes={selectedMinutes}
+          //initial Minutes value
+          onChange={(hours, minutes) => {
+            setSelectedHours(hours);
+            setSelectedMinutes(minutes);
+          }}
+        /> */}
+      </View>
     </SafeAreaView>
   );
 };
-
-export default CreateDate;
 
 const styles = StyleSheet.create({
   container: {
@@ -61,10 +79,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 20,
     fontWeight: "bold",
-    padding: 20,
+    padding: 50,
+    marginTop: 50,
   },
   datePickerStyle: {
     width: 200,
-    marginTop: 20,
   },
 });
+
+export default CreateSchedule;

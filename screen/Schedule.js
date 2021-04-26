@@ -1,19 +1,19 @@
 import React from "react";
 import { Text, View } from "react-native";
-// import CreateDate from "../components/Schedule/CreateSchedule";
-import ScheduleList from "../components/Schedule/ScheduleList";
-import { Box, InnBox } from "../styles";
+import CreateDate from "../components/Schedule/CreateSchedule";
+// import ScheduleList from "../components/Schedule/ScheduleList";
+// import { Box, InnBox } from "../styles";
 const Schedule = () => {
   return (
     <View>
-      {/* <View>
+      <View>
         <CreateDate />
-      </View> */}
-      <Box>
+      </View>
+      {/* <Box>
         <InnBox>
           <ScheduleList />
         </InnBox>
-      </Box>
+      </Box> */}
     </View>
   );
 };
