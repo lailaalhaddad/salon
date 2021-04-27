@@ -49,6 +49,10 @@ class ScheduleStore {
   };
 }
 
+// updateSchedule = (scheduleId) => {
+//   this.schedules = this.schedules.find((schedule) => schedule.id === +scheduleId)
+// }
+
 const scheduleStore = new ScheduleStore();
 
 // scheduleStore.fetchSchedule();

@@ -2,15 +2,15 @@ import styled from "styled-components/native";
 
 export const CustomTable = styled.View`
   flex: 1;
-  background-color: blue;
+  /* background-color: blue; */
   padding: 20px;
   align-content: center;
-  /* margin-left: 220px;
-  margin-right: 100px; */
+  margin-left: 220px;
+  margin-right: 100px;
   height: 100%;
   color: white;
-  /* border-color: black;
-  border-style: solid; */
+  border-color: black;
+  border-style: solid;
 `;
 export const TableContent = styled.View`
   margin-left: 400px;
@@ -27,9 +27,10 @@ export const ButtonContainer = styled.TouchableOpacity`
   padding: 5px;
 `;
 export const Box = styled.View`
+  flex: 1;
   width: 80%;
-  height: 50%;
-  padding: 2px;
+  height: 100%;
+  padding: 10px;
 `;
 export const InnBox = styled.View`
   flex: 1;
@@ -57,6 +58,14 @@ export const Button = styled.TouchableOpacity`
   justify-content: center;
   background-color: red;
   width: 100%;
+  height: 45px;
+  padding: 5px;
+`;
+export const AddButton = styled.TouchableOpacity`
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  width: 50%;
   height: 45px;
   padding: 5px;
 `;

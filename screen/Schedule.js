@@ -1,20 +1,22 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import CreateSchedule from "../components/Schedule/CreateSchedule";
 import ScheduleList from "../components/Schedule/ScheduleList";
 import { Box, InnBox } from "../styles";
 const Schedule = () => {
   return (
-    <View>
-      <View>
+    <ScrollView>
+      <ScrollView>
         <CreateSchedule />
-      </View>
-      <Box>
-        <InnBox>
-          <ScheduleList />
-        </InnBox>
-      </Box>
-    </View>
+      </ScrollView>
+      <ScrollView>
+        <Box>
+          <InnBox>
+            <ScheduleList />
+          </InnBox>
+        </Box>
+      </ScrollView>
+    </ScrollView>
   );
 };
 
